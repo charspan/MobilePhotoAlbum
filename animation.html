@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css3 keyframes 动画初体验</title>
+<style type="text/css">
+
+/*  Chrome,Safari,Opera*/
+@-webkit-keyframes myfirst{
+	0% {background:red;}
+	25% {background:yellow;}
+	50% {background:blue;}
+	100% {background:green;}
+}
+
+/* Standard syntax  */
+@keyframes myfirst{
+	0% {background:red;}
+	25% {background:yellow;}
+	50% {background:blue;}
+	100% {background:green;}
+}
+
+div{
+	/*  Chrome,Safari,Opera*/
+	/*动画名就是关键帧名字  */
+	-webkit-animation-name:myfirst;
+	/*动画执行完整时间  */
+	-webkit-animation-duration:5s;
+	/*动画执行方式,linear 线性方式 ease-in由慢到快 ease-out由快到慢*/
+	-webkit-animation-timing-function:linear;
+	/*动画开始执行的时间延迟*/
+	-webkit-animation-delay:2s;
+	/*动画无限循环*/
+	-webkit-animation-iteration-count:infinite;
+	/*动画*/
+	-webkit-animation-direction:alternate;
+	/*动画*/
+	-webkit-animation-play-state:running;
+	/* Standard syntax  */
+	animation-name:myfirst;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+}
+
+/*webkitAnimationEnd  */
+</style>
+<script type="text/javascript">
+var img=new Image();
+img.onload=function(){
+	debugger;
+}
+img.src='http://www.baidu.com/img/bdlogo.gif';
+</script>
+</head>
+<body>
+<div style="width: 100px;height: 100px;background: red;"></div>
+</body>
+</html>
